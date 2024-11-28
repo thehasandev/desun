@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Container from "./Container";
 import { IoSearchOutline } from "react-icons/io5";
-import Logo from "../../public/images/logo.png";
+import Logo from "../../public/images/logo_white.png";
 export default function Navber() {
   return (
     <Container>
-      <nav className="grid grid-cols-6 gap-4 justify-between items-center">
-        <div>
+      <nav className="fixed w-full grid grid-cols-12 gap-4 items-center text-white">
+        <div className="col-span-2">
           <Image src={Logo} width={200} height={200} alt="logo" />
         </div>
-        <ul className="col-span-4 flex gap-4 text-base text-black/80">
+        <ul className="flex col-span-8 justify-between text-base">
           <li>Home</li>
           <li>About</li>
           <li>Desheng</li>
@@ -19,7 +19,7 @@ export default function Navber() {
           <li>Service Support</li>
           <li>Contact Us</li>
         </ul>
-        <div className="flex gap-2 items-center text-black/80">
+        <div className="col-span-2 flex items-center  gap-5">
           <IoSearchOutline size={18} />
           <span>|</span>
           <p className="text-base font-normal">English</p>
