@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navber from "./components/Navber";
 
 export const microsoftYahei = localFont({
   src: "./fonts/MicrosoftYaheifont.otf",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${microsoftYahei.className} antialiased`}>
+        <Navber />
         {children}
       </body>
     </html>
